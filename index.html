@@ -4,10 +4,102 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>CV App</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
+      <div id="app" class="container">
+        <div class="first-line">
+          <div class="profileImg ripple">
+            <img src="img/f549d15a8712b0bb597c1df9bd3af27a.jpg" alt="Фото профиля" class="prof-img">
+            <input type="file" id="avatarInput" accept="image/*">
+          </div>
+          <div class="name box">
+            <div class="greetingPhrase">Hello 👋🏻 I’m</div>
+            <div>
+              <div class="full-name" contenteditable="true">Kartnik SR</div>
+              <div id="role" class="role" contenteditable="true">UX/UI Designer</div>
+            </div>
+          </div>
+          <div class="languages box">
+            <div class="languages-header">
+              <div class="languages-box-title">Languages</div>
+              <button id="addLanguageBtn" class="add-language-btn ripple">+</button>
+            </div>
+            <div class="listLanguages">
+              <div class="language-item">
+                <button class="delete-language-btn ripple">✕</button>
+                <div class="language-name" contenteditable="true">English</div>
+                <div class="progress-container ripple">
+                  <div class="progress-bar"></div>
+                </div>
+              </div>
+              <div class="language-item">
+                <button class="delete-language-btn ripple">✕</button>
+                <div class="language-name" contenteditable="true">Russian</div>
+                <div class="progress-container ripple">
+                  <div class="progress-bar"></div>
+                </div>
+              </div>
+              <div class="language-item">
+                <button class="delete-language-btn ripple">✕</button>
+                <div class="language-name" contenteditable="true">Spanish</div>
+                <div class="progress-container ripple">
+                  <div class="progress-bar"></div>
+                </div>
+              </div>           
+            </div>
+          </div>
+        </div>
+        <div class="second-line">
+          <div class="experience box">
+            <div class="experience-header">
+              <div class="experience-box-title">Experience</div>
+              <button id="addExperienceBtn" class="add-experience-btn ripple">+ Add Experience</button>
+            </div>
+            <div class="job-list">
+            </div>
+          </div>
+          <div class="tools box">
+            <div class="tools-box-title">Tools</div>
+            <div class="tools-box-content">
+              <div class="tools-box-design">
+                <div>design</div>
+                <img src="https://img.icons8.com/?size=100&id=nvtEH6DpqruC&format=png&color=000000" alt="Фото notion" class="prof-img notion-icon">
+                <img src="https://img.icons8.com/?size=100&id=NeNPFdj7MzXi&format=png&color=000000" alt="Фото notion" class="prof-img notion-icon">
+
+              </div>
+              <div class="tools-box-design-no-code"></div>
+              <div class="tools-box-ai"></div>
+            </div>
+          </div>
+        </div>
+        <div class="third-line">
+          <div class="education box" >
+            <div class="education-header">
+              <div class="education-box-title">Education</div>
+              <button id="addEducationBtn" class="add-education-btn ripple">+ Add Education</button>
+            </div>
+            <div class="education-list">
+            </div>
+          </div>
+          <div class="extra">
+            <div class="interests-box box">
+              <div class="interests-header">
+                <div class="interests-box-title">Interests</div>
+                <button id="addInterestBtn" class="add-interest-btn ripple">+</button>
+              </div>
+              <div class="content-tags-container">
+              </div>
+            </div>
+            <div class="contact box">
+              <div class="contact-box-title">Let´s chat! I´m ready to work on exciting projects</div>
+              <div class="email" contenteditable="true">Your email</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
